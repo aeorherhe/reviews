@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//   /* general variables */
+$shadow-1: 0 0 5px rgb(250, 234, 230);
+$shadow-2: 0px 0px 20px 2px rgba(150, 150, 150, 0.3);
+$transition: all 0.3s linear;
+$transition-2: all 0.5s ease-in-out;
+$line-1: 2px solid rgba(116, 108, 113, 0.5);
+$line-2: 2px solid rgba(28, 28, 192, 0.5);
+$line-3: 2px solid rgba(9, 224, 88, 0.5);
+
+// colors
+$White: hsl(0, 0%, 100%);
+$Dark: #303b5a;
+$black: #0f172a;
+$bg-body: #f8fafc;
+$Persian-blue: #2421ca00;
+
+// /******** variables for this project ********/
+$Light-red: hsl(0, 100%, 67%);
+$Orangey-yellow: hsl(39, 100%, 56%);
+$Green-teal: hsl(166, 100%, 37%);
+$Cobalt-blue: hsl(234, 85%, 45%);
+
+// ## Gradients
+// background
+$Light-slate-blue: hsl(252, 100%, 67%);
+$Light-royal-blue: hsl(241, 81%, 54%);
+// circle
+$Violet-blue: hsla(256, 72%, 46%, 1);
+
+// Neutral
+$Pale-blue: hsl(221, 100%, 96%);
+$Light-lavender: hsl(241, 100%, 89%);
+
+body {
+  background-color: $bg-body;
+  font-family: "Inter", "Open Sans", Arial, Helvetica, sans-serif;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.main-ctn {
+  width: 400px;
+  width: 90vw;
+  max-width: 45rem;
+  box-shadow: $shadow-2;
+  border-radius: 0.5rem;
+}
+
+.reviews-ctn {
+  padding: 1rem;
+  text-align: center;
+}
+
+.img-ctn {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+.person-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+}
+.quote-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transform: translateY(25%);
+  background: $Light-slate-blue;
+  color: $White;
+}
+
+.img-ctn::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: $Light-slate-blue;
+  position: absolute;
+  top: -0.25rem;
+  right: -0.5rem;
+  border-radius: 50%;
+}
+
+.btn {
+  cursor: pointer;
+  margin: 1rem 0;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  outline: none;
+  background-color: #303b5a;
+  font-size: 1rem;
+  color: $White;
+  text-transform: capitalize;
+  border-radius: 0.5rem;
+  letter-spacing: 0.05rem;
+}
+
+.review {
+  h4,
+  .job {
+    text-transform: capitalize;
+    margin: 0.75rem 0;
+  }
+}
+.prev-btn,
+.next-btn {
+  color: $Light-slate-blue;
+  font-size: 1.25rem;
+  background: transparent;
+  border-color: transparent;
+  margin: 0.75rem 0.5rem 0.25rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
